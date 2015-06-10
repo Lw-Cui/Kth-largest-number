@@ -84,6 +84,7 @@ void DivideAndConquer(int array[], int left, int right, int kth)
 }
 
 
+<<<<<<< HEAD
 /*
 	using heap to maintain the largest number ranges from 1th largest
 	to kth largest. the answer is easy to find.
@@ -118,6 +119,8 @@ int maxHeap(int array[], int kth, int len)
 	return ans;
 }
 
+=======
+>>>>>>> ab77b26b4d283c5637d0449733c49d1bf08a80c6
 const int LEN = 90000000;
 const int k = 1234567;
 
@@ -135,11 +138,18 @@ int main(int argc, char const *argv[])
 	memcpy(Copy, Array, sizeof(int) * LEN);
 
 	DivideAndConquer(tmp, 0, LEN - 1, k - 1);
+<<<<<<< HEAD
 	//qsort(Copy, 0, LEN - 1);
 
 	cout << tmp[k - 1] << endl
 	<< maxHeap(Copy, k, LEN) << endl;
 		//<< Copy[k - 1] << endl;
+=======
+	qsort(Copy, 0, LEN - 1);
+
+	cout << tmp[k - 1] << endl
+		<< Copy[k - 1] << endl;
+>>>>>>> ab77b26b4d283c5637d0449733c49d1bf08a80c6
 		//<< selectionSort(Array, LEN, k) << endl;
 
 	return 0;
