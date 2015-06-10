@@ -1,6 +1,6 @@
 HDR_DIR = header
 HEADER = $(addprefix -I,$(HDR_DIR))
-CCOPTION = Wall std=gnu++11 D__USE_MINGW_ANSI_STDIO=1
+CCOPTION = Wall std=gnu++11 D__USE_MINGW_ANSI_STDIO=1 pg
 FLAGS = $(addprefix -,$(CCOPTION))
 CC = g++
 OBJ_DIR = obj

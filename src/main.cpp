@@ -16,8 +16,8 @@
 #define Swap(a, b) do {typeof(a) t = a; a = b; b = t;} while(0);
 using namespace std;
 
-const int LEN = 90000000;
-const int k = 1234567;
+const int LEN = 9000000;
+const int k = 123456;
 
 int Array[LEN];
 int tmp[LEN];
