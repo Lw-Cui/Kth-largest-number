@@ -10,7 +10,7 @@
             "Wall", 
             "std=gnu++11", 
             "D__USE_MINGW_ANSI_STDIO=1",
-            "-pg"
+            "pg"
         ], 
         "cc": "g++", 
         "include_dir": [

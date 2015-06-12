@@ -5,9 +5,22 @@
 */
 
 #include "function.h"
-#define Swap(a, b) do {typeof(a) t = a; a = b; b = t;} while(0);
+#include <cstring>
 
-void DivideAndConquer(int array[], int left, int right, int kth)
+#define Swap(a, b) do {typeof(a) t = a; a = b; b = t;} while(0);
+void divideAndConquerAux(int array[], int left, int right, int kth);
+
+int divideAndConquer(int array[], int len, int kth)
+{
+	int *data = new int[len];
+	memcpy(data, array, sizeof(int) * len);
+	divideAndConquerAux(data, 0, len - 1, kth - 1);
+	int ans = data[kth - 1];
+	delete data;
+	return ans;
+}
+
+void divideAndConquerAux(int array[], int left, int right, int kth)
 {
 	if (left >= right)
 		return;
@@ -21,7 +34,7 @@ void DivideAndConquer(int array[], int left, int right, int kth)
 	if (kth == index)
 		return;
 	else if (kth > index)
-		DivideAndConquer(array, index + 1, right, kth);
+		divideAndConquerAux(array, index + 1, right, kth);
 	else
-		DivideAndConquer(array, left, index - 1, kth);
+		divideAndConquerAux(array, left, index - 1, kth);
 }

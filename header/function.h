@@ -2,8 +2,8 @@
 #define _FUNCTION_
 
 int selectionSort(int array[], int len, int kth);
-void qsort(int array[], int left, int right);
-void DivideAndConquer(int array[], int left, int right, int kth);
-int maxHeap(int array[], int kth, int len);
+int qsort(int array[], int len, int kth);
+int divideAndConquer(int array[], int len, int kth);
+int maxHeap(int array[], int len, int k);
 
 #endif
