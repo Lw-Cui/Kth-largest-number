@@ -16,7 +16,7 @@ int selectionSort(int array[], int len, int kth)
 	memcpy(data, array, sizeof(int) * len);
 	selectionSortAux(data, len, kth);
 	int ans = data[kth - 1];
-	delete data;
+	delete[] data;
 	return ans;
 }
 

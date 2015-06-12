@@ -16,7 +16,7 @@ int divideAndConquer(int array[], int len, int kth)
 	memcpy(data, array, sizeof(int) * len);
 	divideAndConquerAux(data, 0, len - 1, kth - 1);
 	int ans = data[kth - 1];
-	delete data;
+	delete[] data;
 	return ans;
 }
 

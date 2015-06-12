@@ -22,7 +22,7 @@ int maxHeap(int array[], int len, int kth)
 		}
 
 	int ans = heap[1];
-	delete heap;
+	delete[] heap;
 	return ans;
 }
 
